@@ -1,3 +1,6 @@
+require("dotenv").config();
+const mongoose = require("mongoose");
+
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
@@ -7,12 +10,19 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
+async function main() {
+  await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
+}
+
+main().catch((err) => console.log(err));
+
 const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
+// middleware
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
