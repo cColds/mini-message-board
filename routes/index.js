@@ -1,11 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const Message = require("../models/message");
-
 const messages = [];
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", async function (req, res, next) {
+  const dbMessages = await Message.find();
+  if (!messages.length && dbMessages.length) {
+    dbMessages.forEach((msg) => messages.push(msg));
+  }
+
   res.render("index", { title: "Mini Message Board", messages });
 });
 
