@@ -1,11 +1,12 @@
 extends layout
 
 block content
-    h1 New Message
-    form(action="/new", method="POST") 
-        label Name 
+    div(class="form-heading")
+        h1 New Message
+        a(href="/") Home
+    form(class="new-message" action="/new", method="POST") 
+        label(class="name-field") Name 
             input(type="text" placeholder="Name" name="name")
-        label Message 
+        label(class="message-field") Message 
             input(type="text" placeholder="Message" name="message")
-        button(type="submit") Submit
-    a(href="/") Home
+        button(class="submit-btn" type="submit") Submit

@@ -4,9 +4,11 @@ block content
   h1= title
   p Welcome to #{title}
   a(href="/new") New Message
-  div
+  div(class="messages")
     each message in messages
-        div 
-          p #{message.user}
-          p #{message.added}
-          p #{message.text}
+        div(class="message-container")
+          div(class="message-heading") 
+            p(class="user") #{message.user}
+            span(class="dot") •
+            p(class="date") #{message.added}
+          p(class="message-text") #{message.text}

@@ -1,0 +1,32 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.message-container {
+  background: #e2e8f0;
+  padding: 5px 15px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.message-heading {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.dot {
+  margin: 0 10px;
+  color: #4d4d4d;
+}
+
+.date {
+  color: #4d4d4d;
+}

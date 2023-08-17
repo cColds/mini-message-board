@@ -1,0 +1,42 @@
+.form-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-heading a {
+  font-size: 18px;
+}
+
+.new-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  background: #e2e8f0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.name-field input,
+.message-field input {
+  width: 100%;
+  padding: 6px;
+}
+
+.name-field,
+.message-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  border: 0;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1e293b;
+  color: white;
+}
